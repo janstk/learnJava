@@ -19,14 +19,13 @@ class People
 	{
 		return this.age;
 	}
-	public boolean euqals(Object obj)
+	public boolean equals(Object obj)
 	{
 		if(!(obj instanceof People))
 			return false;
 		People p = (People)obj;
 		if(this.name == p.getName() && this.age == p.getAge())
 		{
-			ArrayListTest2.sop(p.getAge()+"...."+p.getName());
 			return true;
 		}
 		return false;
@@ -52,10 +51,13 @@ class ArrayListTest2
 			People tmp  = (People)it.next();
 			sop(tmp.getName()+"..."+tmp.getAge());
 		}
-		sop("______________________________-");
-		al = SingleElem(al);
-		for (Object peo : al) {
-			sop(((People)peo).getName()+"..."+((People)peo).getAge());
+		sop("___After.......");
+		ArrayList al2 = SingleElem(al);
+		Iterator it2 = al2.iterator();
+		while(it2.hasNext())
+		{
+			People p = (People)it2.next();
+			sop(p.getName()+".."+p.getAge());
 		}
 	}
 	public static void sop(Object obj)
@@ -65,12 +67,20 @@ class ArrayListTest2
 	public static ArrayList SingleElem(ArrayList al)
 	{
 		ArrayList result = new ArrayList();
-		for (Object elem : al) {
-			if(!result.contains(elem)) //use Object.euqals()
-				result.add(elem);
-		}
+	    Iterator it = al.iterator();
+        while(it.hasNext())
+        {
+            Object p = it.next();
+
+          	if(!result.contains(p))
+          	{
+          		result.add(p);
+
+          	}
+
+        }
 	return result;
 	}
 
-	
+
 }
