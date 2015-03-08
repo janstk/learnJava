@@ -68,6 +68,13 @@ class ArrayListTest2
 	{
 		ArrayList result = new ArrayList();
 	    Iterator it = al.iterator();
+
+	    //in my opinion
+	    // for(Object obj : al)
+	    // {
+	    // 	if(!result.contains(obj))
+	    // 		result.add(obj);
+	    // }
         while(it.hasNext())
         {
             Object p = it.next();
