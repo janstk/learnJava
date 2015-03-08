@@ -15,6 +15,7 @@ class ArrayListExam
 		// 	sop(it.next()+"....."+it.next());
 		// }
 		//it will have an exception named NoSuchElementException...
+			
 		sop(li);
 		System.out.println(removeX2(li));
 	}
