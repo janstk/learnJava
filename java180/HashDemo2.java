@@ -21,7 +21,7 @@ class People
     	// return 60;
     	return this.name.hashCode() + age*39;
     	//to make high performance make sure the hashcode won't same..
-    	
+
     }
     public boolean equals(Object obj)
     {
@@ -38,8 +38,13 @@ class HashDemo2
         hs.add(new People("zhangsan",10));
         hs.add(new People("zhangsan",12));
         hs.add(new People("zhangsan",13));
-        hs.add(new People("zhangsan",10));
-        sop(hs);
+        hs.add(new People("zhangsan",14));
+        hs.add(new People("zhangsan",15));
+        hs.add(new People("zhangsan",11));
+        // 179...contains() and remove()
+        // sop(hs.contains(new People("zhangsan",10))); //return true
+        //constains compare hashcode then use euqals()
+
         Iterator it  = hs.iterator();
         while(it.hasNext())
         {
