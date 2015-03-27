@@ -1,0 +1,2 @@
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at ExceptionInfo.main(ExceptionInfo.java:10)
